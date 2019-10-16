@@ -1,0 +1,41 @@
+
+<ion-header>
+    <ion-toolbar text-center>
+      <ion-title>{{modalTitle}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-grid>
+      <ion-item>
+        <ion-label position="stacked" >Titulo</ion-label>
+        <ion-input [(ngModel)] = "titulo" #ctrl="ngModel"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-icon ios="ios-book" md="md-book"></ion-icon>
+          <ion-input placeholder="Nota" [(ngModel)] = "descripcion" #ctrl="ngModel"></ion-input>
+        </ion-item>
+      <ion-content></ion-content> 
+      <ion-item>
+        <ion-label position="floating">Fecha recordatorio</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)] = "fecha" #ctrl="ngModel"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hora recordatorio</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)] = "hora" #ctrl="ngModel"></ion-datetime>
+      </ion-item>
+        
+        <ion-row>
+              <ion-col text-center>
+          <ion-row>
+              <ion-button (click)="closeModal()">cancel</ion-button>
+              <ion-button (click)="cargar()">Guardar</ion-button>
+          </ion-row>
+          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+ 
+ 
+
